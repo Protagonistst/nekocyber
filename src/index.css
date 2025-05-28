@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0D0D0D;
+  color: #f0f0f0;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cyberpunk;
+  }
+}
+
+@layer components {
+  .neon-border {
+    @apply border border-cyber-blue shadow-neon-blue;
+  }
+  
+  .cyber-button {
+    @apply px-6 py-2 bg-cyber-dark border border-cyber-blue text-cyber-blue 
+           shadow-neon-blue font-cyberpunk uppercase tracking-wider
+           hover:bg-cyber-blue hover:text-cyber-black hover:shadow-neon-blue
+           transition-all duration-300 ease-in-out;
+  }
+  
+  .cyber-container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .cyber-card {
+    @apply bg-cyber-dark border border-cyber-blue p-4 hover:shadow-neon-blue
+           transition-all duration-300;
+  }
+}
+
+/* Inside index.css */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+  -moz-appearance: textfield; /* Firefox */
+}
